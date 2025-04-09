@@ -1,0 +1,26 @@
+app/
+├── layout.js                  // Root layout
+├── page.js                    // Home page ("/")
+
+├── about/
+│   └── page.js                // "/about"
+
+├── contact/
+│   └── page.js                // "/contact"
+
+├── settings/
+│   ├── page.js                // "/settings"
+│   └── edit/
+│       └── page.js            // "/settings/edit"
+
+├── write/
+│   └── page.js                // "/write"
+
+├── login/
+│   └── page.js                // "/login"
+
+├── register/
+│   └── page.js                // "/register"
+
+├── logout/
+│   └── page.js                // "/logout"
