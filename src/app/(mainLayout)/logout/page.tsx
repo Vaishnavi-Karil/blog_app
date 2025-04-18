@@ -1,7 +1,9 @@
-export default function LogoutPage() {
-  return (
-    <div>
-      <h1>Logout Page</h1>
-    </div>
-  );
-}
+import React, { FC } from "react";
+
+type LogoutPageProps = {};
+
+const LogoutPage: FC<LogoutPageProps> = (props) => {
+  return <div> You are Logout...</div>;
+};
+
+export default LogoutPage;

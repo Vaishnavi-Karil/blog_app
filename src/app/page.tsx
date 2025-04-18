@@ -1,10 +1,11 @@
+import React, { FC } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function LoginPage() {
-  return (
-    <div>
-      <h1> Home Page </h1>
-    </div>
-  );
-}
+type LoginPageProps = {};
+
+const LoginPage: FC<LoginPageProps> = (props) => {
+  return <div>Login Page</div>;
+};
+
+export default LoginPage;

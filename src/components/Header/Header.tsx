@@ -26,13 +26,13 @@ function Navbar() {
     <nav>
       <ul>
         <li>
-          <Link href="/home">Home</Link>
+          <Link href="/blog">Home</Link>
         </li>
         <li>
           <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog/createblog"> +Blog</Link>
         </li>
         <li>
           <Link href="/contact">Contact</Link>

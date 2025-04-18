@@ -1,7 +1,9 @@
-export default function SettingPage() {
-  return (
-    <div>
-      <h1>Setting Page</h1>
-    </div>
-  );
-}
+import React, { FC } from "react";
+
+type SettingPageProps = {};
+
+const SettingPage: FC<SettingPageProps> = (props) => {
+  return <div>SettingPage</div>;
+};
+
+export default SettingPage;
