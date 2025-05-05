@@ -1,0 +1,37 @@
+.aboutpage_container {
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.aboutpage_container_about_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.aboutpage_container_image_container {
+  /* flex: 1; */
+  /* min-width: fit-content;
+  max-width: 50%; */
+
+  flex: 1;
+}
+
+.aboutpage_container_about_description {
+  /* flex: 1; */
+  /* min-width: fit-content; */
+  /* max-width: 50%; */
+  flex: 2;
+  padding: 0.5rem 2rem;
+}
+
+.aboutusheader {
+  align-items: center;
+}
+
+.aboutimage {
+  /* width: 50vw;
+  height: 100vh; */
+  object-fit: cover;
+}

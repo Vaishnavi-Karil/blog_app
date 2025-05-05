@@ -6,9 +6,10 @@ type MainLayoutprops = {
 };
 export default function MainLayout({ children }: MainLayoutprops) {
   return (
-    <div>
+    <>
       <Header />
-      {children}
-    </div>
+      {/* <div style={{ border: "1px solid black" }}>{children}</div> */}
+      <div className="MainLayout_children">{children}</div>
+    </>
   );
 }

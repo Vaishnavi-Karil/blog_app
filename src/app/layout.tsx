@@ -1,15 +1,20 @@
+"use client";
 import type { Metadata } from "next";
 import "./globals.css";
+import { usePathname } from "next/navigation";
 
-export const metadata = {
-  title: "My App | Dashboard",
-  description: "This is the default description for my app.",
-};
+// export const metadata = {
+//   title: "My App | Dashboard",
+//   description: "This is the default description for my app.",
+// };
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  let isLoginAndRegisterPage = pathname === "/" || pathname === "/register";
+
   return (
     <html lang="en">
       <head>
@@ -24,7 +29,18 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="vsc-initialized">{children}</body>
+      <body className="vsc-initialized">
+        {isLoginAndRegisterPage ? (
+          <div className="maincontainer">
+            <div className="hero_container">
+              {/* <h1 className="bloggingapp">Blogging App</h1> */}
+            </div>
+            <div style={{ flex: "1", alignContent: "center" }}>{children}</div>
+          </div>
+        ) : (
+          <div className="application_main_container"> {children}</div>
+        )}
+      </body>
     </html>
   );
 }
