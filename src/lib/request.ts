@@ -7,4 +7,5 @@ export const request = {
   register: `${baseUrl}/register`,
   getAllPublishedBlog: `${baseUrl}/blog/getAllPublishedBlog`,
   getAllBlogByUserId: `${baseUrl}/blog/getAllBlogByUserId`,
+  getYouBlogPublishedOrUnPublished: `${baseUrl}/blog/getYouBlogPublishedOrUnPublished`,
 };

@@ -1,6 +1,8 @@
 "use client";
+
 import { BlogPaper, BlogPaperCard } from "@/components/Blog/Blog";
 import { fetchPublishedBlogs } from "@/lib/apicalls/blog";
+import { useRouter } from "next/navigation";
 import React, { FC, useEffect, useState } from "react";
 
 type BlogPageProps = {};
@@ -16,6 +18,7 @@ type Blog = {
 
 const BlogPage: FC<BlogPageProps> = (props) => {
   const [blogs, setblogs] = useState<Blog[]>([]);
+
   useEffect(() => {
     fetchPublishedBlogs()
       .then((res) => {
@@ -32,7 +35,7 @@ const BlogPage: FC<BlogPageProps> = (props) => {
       <h1>Blogs</h1>
       <div className="blog_paper_container">
         {blogs?.map((blog, index) => {
-          return <BlogPaperCard key={index} blog={blog} />;
+          return <BlogPaperCard key={index} blog={blog} isPage="Home" />;
         })}
       </div>
     </>

@@ -92,10 +92,15 @@ export const POST = async (req: NextRequest) => {
     ]);
 
     const [createdBlogData] = createdBlog;
-    return NextResponse.json({
-      message: "Blog is created successfully.",
-      blog: createdBlogData,
-    });
+    return NextResponse.json(
+      {
+        message: "Blog is created successfully.",
+        blog: createdBlogData,
+      },
+      {
+        status: 201,
+      }
+    );
   } catch (error) {
     console.log("ERROR __ while creating the blog", error);
     return NextResponse.json({

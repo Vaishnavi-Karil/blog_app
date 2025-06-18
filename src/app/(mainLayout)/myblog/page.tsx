@@ -1,7 +1,6 @@
 "use client";
 import { BlogPaperCard } from "@/components/Blog/Blog";
 import { getAllBlogByUserId } from "@/lib/apicalls/blog";
-import { get } from "http";
 import React, { FC, useEffect, useState } from "react";
 
 type BlogPageProps = {};
@@ -22,7 +21,7 @@ const MyBlog = (props: Props) => {
 
   useEffect(() => {
     let getLoginedUserDetails = localStorage.getItem("user");
-    let getloginUserDetailsObject = JSON.parse(getLoginedUserDetails);
+    let getloginUserDetailsObject = JSON.parse(getLoginedUserDetails!);
     console.log("getLoginedUserDetails", getloginUserDetailsObject);
 
     const { id } = getloginUserDetailsObject;

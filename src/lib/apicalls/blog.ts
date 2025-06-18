@@ -58,3 +58,37 @@ export const createBlog = async (blog: any) => {
   const data = await res.json();
   return data;
 };
+type BlogType = {
+  blogId: number | string; // depends on your DB: UUID (string) or numeric ID
+  published: 0 | 1; // only allows 0 or 1
+  authorId: number; // typically a number
+};
+
+export const getYouBlogPublishedOrUnPublished = async (
+  blogdetails: BlogType
+) => {
+  console.log("blogdetails", blogdetails);
+  const { blogId, published, authorId } = blogdetails;
+
+  const res = await fetch(
+    `${request.getYouBlogPublishedOrUnPublished}/${blogId}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        published,
+        authorId,
+      }),
+    }
+  );
+
+  // if (!res.ok) {
+  //   throw new Error("Something went wrong!");
+  // }
+
+  let data = await res.json();
+  console.log("getYouBlogPublishedOrUnPublished RESPONSE", res, data);
+  return data;
+};
